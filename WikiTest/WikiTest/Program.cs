@@ -14,6 +14,7 @@ namespace WikiTest
             WebTest wTest = new WebTest();
             wTest.startBrowser();
             wTest.makeTest();
+            System.Threading.Thread.Sleep(10000);
             wTest.closeBrowser();
         }
     }

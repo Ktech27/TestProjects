@@ -35,7 +35,7 @@ namespace TestCreativeTim
 
             System.Threading.Thread.Sleep(500);
 
-            // Click Dashboard
+            // Click Dashboard back return
 
             //Driver.FindElement(By.XPath("/html/body/div[2]/div/div[2]/nav/div/div[2]/ul/li[1]/a")).Click();
             Driver.Navigate().Back();

@@ -13,7 +13,7 @@ namespace TestCreativeTim
             webCreative webtest2 = new webCreative();
             webtest2.startBrower();
             webtest2.maketest();
-            System.Threading.Thread.Sleep(10000);
+            System.Threading.Thread.Sleep(50000);
         }
     }
 }

@@ -24,7 +24,7 @@ namespace TestCreativeTim
          
             
             Driver.Url = "https://demos.creative-tim.com/vue-white-dashboard-pro/#/";
-           IWebElement Listview = Driver.FindElement(By.ClassName("caret"));
+            IWebElement Listview = Driver.FindElement(By.ClassName("caret"));
             Listview.Click();
 
             System.Threading.Thread.Sleep(500);

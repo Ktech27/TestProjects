@@ -18,6 +18,9 @@ namespace TaskCreativeTim
         public void Startbrowser()
         {
             Driver = new ChromeDriver(@"C:\Users\Katherin\Documents\Testing");
+            //Driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(20000000000);
+
+            //Driver.Manage().Timeouts().ImplicitWait.
 
         }
 
@@ -41,37 +44,37 @@ namespace TaskCreativeTim
 
             // Add text in the fields
 
-            System.Threading.Thread.Sleep(1000);
+  
 
             //Get the Web Element corresponding to the field Business Email (Textfield)
 
-            System.Threading.Thread.Sleep(500);
+         
 
             IWebElement Email = Driver.FindElement(By.XPath("//div[@class='form-group has-label']//input[@placeholder='Enter email']"));
 
             //Get the Web Element corresponding to the Password Field 
 
-            System.Threading.Thread.Sleep(500);
+          
 
             IWebElement Password = Driver.FindElement(By.XPath("//div[@class='form-group has-label']//input[@placeholder='Password']"));
 
             //Find the Sign me in button
 
             IWebElement Login = Driver.FindElement(By.XPath("//button[contains(text(),'Submit')]"));
-            System.Threading.Thread.Sleep(500);
+           System.Threading.Thread.Sleep(500);
             Email.SendKeys("@kalexa");
-            System.Threading.Thread.Sleep(500);
+           System.Threading.Thread.Sleep(500);
             Password.SendKeys("@abc123");
-            System.Threading.Thread.Sleep(500);
+           System.Threading.Thread.Sleep(500);
             Login.Click();
 
-            System.Threading.Thread.Sleep(300);
+           System.Threading.Thread.Sleep(00);
            
 
             // click to checkbox
 
             IWebElement Checkbox1 = Driver.FindElement(By.XPath("//label[contains(text(),'First checkbox')]"));
-
+            
             // click in the second checkbox
 
             IWebElement Checkbox2 = Driver.FindElement(By.XPath("//label[contains(text(),'Second checkbox')]"));
@@ -81,8 +84,23 @@ namespace TaskCreativeTim
             System.Threading.Thread.Sleep(800);
             Checkbox2.Click();
 
+            // Radio Button 
 
-            System.Threading.Thread.Sleep(300);
+
+           IWebElement Radio2 = Driver.FindElement(By.XPath("//label[contains(text(),'Second Radio')]"));
+
+            Radio2.Click();
+            System.Threading.Thread.Sleep(500);
+            IWebElement Radio1 = Driver.FindElement(By.XPath("//label[contains(text(),'First Radio')]"));
+            Radio1.Click();
+            System.Threading.Thread.Sleep(500);
+
+
+
+
+
+            
+
             Driver.Close();
         }
 
